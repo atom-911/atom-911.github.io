@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.7);
+    background: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+#home .bg {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.637)),url(../images/bg.jpg);
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    background-position: center ;   
+}
+#home .bg .content{
+    color : #fff;
+    margin-bottom : 80px;
+}
+#home .bg .content h1 {
+    font-size : 50px;
+}
+#home .bg .content h4 {
+    font-weight: 200;
+   
+}
+nav {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 1px 2px rgb(168, 166, 166);
+    padding: 0;
+}
+nav .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+nav .menu .avata {
+    background-image: url(../images/avata.jpg);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 5px solid #fff;
+    background-position: center ;   
+    margin: 0 -80px;
+}
+
+nav .menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu ul li {
+    padding: 20px 40px;
+    border-right: 1px solid #eaeaea;
+    margin: 0;
+    cursor: pointer;
+}
+nav .menu ul li:first-child{
+    border-left: 1px solid #eaeaea;
+}
+nav .menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
