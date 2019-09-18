@@ -120,7 +120,7 @@ nav .menu ul li i{
     flex-wrap: wrap;
     background: #f5f5f5;
     height: auto;
-    
+    flex-direction: row;
 }
 .block-content .two{
     background: #f0f0f0;
@@ -128,7 +128,7 @@ nav .menu ul li i{
 .block-content .block-about{
     width: 33%;
     margin: 0;
-    padding: 100px 50px 70px 60px;
+    padding: 100px 80px 70px 60px;
     font-weight: 200;
     font-size: 15px;
 }
@@ -193,30 +193,75 @@ nav .menu ul li i{
 
 /* Section resume */
 .resume{
-    padding: 100px 0;
+    padding: 100px 0 80px 0 ;
 }
 
 .resume .block-content {
     background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+    flex-direction: row;
 }
 
 .resume .block-content .one{
-    height: 330px;
+    height: 300px;
+    
 }
 .resume .block-content .two {
     background: #fff;
-}
-.resume .block-content .three {
     height: 400px;
 }
-.resume .block-content .four {
-    margin-top : -50px;
+.resume .block-content .three {
+   height: auto;
 }
+.resume .block-content .three .rating{
+    margin-top : -22px;
+}
+.resume .block-content .three ul{
+    list-style: none;
+}
+.resume .block-content .three ul li {
+    margin-bottom: 15px;
+}
+.resume .block-content .three span{
+    background: #199cdb;
+    display: inline-block;
+    height: 2px;
+    margin-right: 10px;
+    width: 47px;
+    margin-top : -5px;
+}
+span.transparent{
+    opacity: 0.1;
+    background: #888888;
+}
+
+.resume .block-content .four .wrap {
+    display: inline-block;
+    text-align: center;
+    
+}   
+.resume .block-content .four .circle{
+    text-align: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    border : 1px solid #199cdb;
+    margin: 10px 1px;
+    line-height: 53px;
+}
+
+
 .resume .block-content .block-about{
     border: 1px solid #f0f0f0;
     width: 32%;
-    padding: 60px 30px 30px 30px;
-    line-height: 20px;
+    padding: 60px 20px 0px 30px;
+    line-height: 17px;
+    margin: 10px 0;
+ 
 }
 .resume .block-content .block-about h2{
     font-weight: 200;
@@ -269,19 +314,93 @@ width: 100%;
     font-size : 13px;
 }
   
-  
 
-@media screen and (max-width : 900px){
+
+ #portfolio{
+    padding: 100px 0 80px 0 ;
+    background: #f0f0f0;
+ } 
+ #portfolio .block-content{
+     padding: 20px;
+     background: #f0f0f0;
+ }
+ #portfolio .block-content ul {
+    display: inline-block;
+    position: relative;
+    margin-left: 28px;
+ }
+ #portfolio .block-content ul li{
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 25px;
+    position: relative;
+ }
+ #portfolio .block-content ul li a{
+    display: inline-block;  
+    color: #8b8a8a;
+    background: #f0f0f0;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+ }
+ #portfolio .block-content ul li a.active{
+    color: #131212;
+   
+    border-bottom: 2px solid #228cc2;
+ }
+.grid{
+    width: 100%;
+    background: #f0f0f0;
+    padding: 0 20px ;
+}
+ .grid-item { width: 23%; margin: 4px }
+ .grid-item img{
+     width: 100%;
+ }
+
+
+
+@media screen and (max-width : 992px){
+    #home .bg{
+        background-position: unset;
+        height: 600px;
+    }
     nav .menu .avata{
         display: none;
     }
     .block-content .block-about{
         width: 100%;
-        padding: 100px 100px 50px 100px;
+        padding: 100px 60px 50px 60px;
     }
     .resume .block-content .block-about{
         height: auto;
         width: 100%;
-        margin: 20px 80px;
+        margin: 20px 40px;
+        padding: auto;
     }
+    .resume .block-content .three ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 110%;
+    }
+    .resume .block-content .three ul li {
+        width: 40%;
+    }
+    .resume .block-content .three span{
+        
+        height: 2px;
+        margin-right: 12px;
+        width: 70px;
+    }
+    nav .menu {
+        display: none;
+    }
+    .grid{
+        
+        padding: 0 ;
+    }
+    .grid-item { width: 46%; margin: 5px }
+   
 }
