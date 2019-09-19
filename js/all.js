@@ -1,4 +1,44 @@
 $(document).ready(function(){
+   
+    $(document).scroll(function(){
+        var pos = $('body,html').scrollTop() ;
+        
+        if(pos >=580 )
+        {
+            $('.btt').addClass("active")
+             $('nav').addClass("scaleMenu")
+        }
+        else 
+        {
+            $('.btt').removeClass("active")
+             $('nav').removeClass("scaleMenu")
+        }
+
+        $('nav .menu ul li').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("data"));
+            if (refElement.position().top <= pos && refElement.position().top + refElement.height() > pos) {
+                $('nav .menu ul li').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    
+    })
+    $('.btt i').click(function(){
+        $("html,body").animate({ scrollTop: 0 }, 1000); 
+    })
+   $('.menu ul li ').click(function() {
+    $('.menu ul li').removeClass('active')
+    $(this).addClass("active")
+    let target = $(this).attr("data");
+        $('html,body').stop().animate({
+        scrollTop: $(target).offset().top
+        }, 1000);    
+        event.preventDefault();
+   })
    $('.grid').isotope({
         // options
         itemSelector: '.grid-item'
@@ -19,7 +59,10 @@ $(document).ready(function(){
         }
     
     })
+    // fancybox
     $('.fancybox').fancybox();
+
+    // count text
     var counters = $(".count");
     var countersQuantity = counters.length;
     var counter = [];
