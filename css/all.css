@@ -17,7 +17,7 @@ body{
     width: 100%;
     height: 100%;
 }
-
+/* Header */
 #home .bg {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.884)),url(../images/bg.jpg);
     width: 100%;
@@ -43,6 +43,8 @@ body{
     font-weight: 200;
    
 }
+
+/* Navigation */
 nav {
     width: 100%;
     height: 70px;
@@ -113,6 +115,9 @@ nav .menu ul li i{
     margin-left: 20px;
 } 
 
+/* End navigation */
+
+
 .block-content {
     width: 100%;
     display: flex;
@@ -122,16 +127,7 @@ nav .menu ul li i{
     height: auto;
     flex-direction: row;
 }
-.block-content .two{
-    background: #f0f0f0;
-}
-.block-content .block-about{
-    width: 33%;
-    margin: 0;
-    padding: 100px 80px 70px 60px;
-    font-weight: 200;
-    font-size: 15px;
-}
+
 .block-title {
     margin-bottom: 20px;
 }
@@ -142,7 +138,7 @@ nav .menu ul li i{
     position: relative;
     
 }
- .block-title h2:before{
+.block-title h2:before{
     content: "";
     position: absolute;
     background: #199cdb;
@@ -151,6 +147,18 @@ nav .menu ul li i{
     top: -20px;
     width: 30px;
 }
+
+/* Section about*/
+.block-content .two{
+    background: #f0f0f0;
+}
+.block-content .block-item{
+    width: 33%;
+    margin: 0;
+    padding: 100px 80px 70px 60px;
+    font-weight: 200;
+    font-size: 15px;
+}
 .block-content h5{
     font-weight: 400;
     margin-bottom: 12px;
@@ -158,7 +166,9 @@ nav .menu ul li i{
 .block-content .one{
     line-height: 24px;
 }
-
+.block-content .two ul{
+    margin-bottom: 50px;
+}
 .block-content .two ul li{
     list-style: none;
     letter-spacing: 1px;
@@ -188,7 +198,27 @@ nav .menu ul li i{
     font-size: 45px;  
     color: #e0dede;
 }
-
+.about .block-content .wrap {
+    display: inline-block;
+    text-align: center;
+    
+}   
+.about .block-content .block-desc{
+    text-align: center;
+}
+.about .block-content  .circle{
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border : 1px solid #199cdb;
+    margin: 5px;
+    line-height: 45px;
+}
+.about .block-content  .circle:hover i {
+    color : #199cdb;
+    transition: 0.5s;
+}
 /* End section about */
 
 /* Section resume */
@@ -198,25 +228,34 @@ nav .menu ul li i{
 
 .resume .block-content {
     background: #fff;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    display: flex;  
     flex-wrap: wrap;
-    height: auto;
-    flex-direction: row;
-}
 
+}
+.resume .block-content .block-item{
+    border: 1px solid #f0f0f0;
+    flex: 32%;
+    padding: 60px 20px 0px 30px;
+    line-height: 17px;
+    margin: 10px 4px;
+    max-width: 32%;
+    position: relative;
+}
 .resume .block-content .one{
-    height: 300px;
+    order : 1;
+    height: 100%;
     
 }
 .resume .block-content .two {
     background: #fff;
-    height: 400px;
+    order : 3;
+    height: 100%;
 }
 .resume .block-content .three {
-   height: auto;
-}
+    order : 2;
+ }
+
 .resume .block-content .three .rating{
     margin-top : -22px;
 }
@@ -239,31 +278,7 @@ span.transparent{
     background: #888888;
 }
 
-.resume .block-content .four .wrap {
-    display: inline-block;
-    text-align: center;
-    
-}   
-.resume .block-content .four .circle{
-    text-align: center;
-    width: 53px;
-    height: 53px;
-    border-radius: 50%;
-    border : 1px solid #199cdb;
-    margin: 10px 1px;
-    line-height: 53px;
-}
-
-
-.resume .block-content .block-about{
-    border: 1px solid #f0f0f0;
-    width: 32%;
-    padding: 60px 20px 0px 30px;
-    line-height: 17px;
-    margin: 10px 0;
- 
-}
-.resume .block-content .block-about h2{
+.resume .block-content .block-item h2{
     font-weight: 200;
 }
 
@@ -307,15 +322,67 @@ left: -8px;
 
 .content-desc {
 position: relative;
-border-radius: 6px;
-width: 100%;
+width: 90%;
 }
 .content-desc p {
     font-size : 13px;
 }
   
+.block-content ul.fact-list{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+.block-content ul.fact-list li:first-child{
+    background: #199cdb;
+}
+.block-content ul.fact-list li:nth-child(2){
+    background: #2396CE;
+}
+.block-content ul.fact-list li:nth-child(3){
+    background: #228CC2;
+}
+.block-content ul.fact-list li:last-child{
+    background: #1F83B5;
+}
+.block-content ul.fact-list li {
+    padding: 60px 0;
+    color: #fff;
+}
+
+.fact-list li .inner-fact {
+    margin-left: 45px;
+}
+
+.fact-list li span.ico-fact {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 45px;
+    line-height: 52px;
+    margin-right: 30px;
+    margin-top: 8px;
+    position: relative;
+    text-align: center;
+    width: 45px;
+}
+.fact-list li .desc-fact {
+    font-size: 20px;
+    line-height: 32px;
+    color: #ffffff;
+    float: left;
+}
+
+.fact-list li .desc-fact span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+/* End section resume */
 
 
+/* Section portfolio */
  #portfolio{
     padding: 100px 0 80px 0 ;
     background: #f0f0f0;
@@ -339,13 +406,12 @@ width: 100%;
     display: inline-block;  
     color: #8b8a8a;
     background: #f0f0f0;
-    border-radius: 3px;
+    border-radius: 2px;
     text-decoration: none;
     cursor: pointer;
  }
  #portfolio .block-content ul li a.active{
     color: #131212;
-   
     border-bottom: 2px solid #228cc2;
  }
 .grid{
@@ -358,8 +424,133 @@ width: 100%;
      width: 100%;
  }
 
+ .grid .bg-img {
+     background: rgba(35, 35, 35, 0.6);
+     position: absolute;
+     height: 100%;  
+     display: flex;
+     align-items: center;
+     justify-content: center;    
+     text-align: center;
+     color: #f0f0f0;
+     opacity: 0;
+     transition: 0.5s;
+     flex-direction: column;
+     cursor: pointer;
+ }
+ .grid .bg-img p {
+     font-size : 13px;
+     width: 70%;
+     margin: 0 auto;
+ }
+ .grid .bg-img::before {
+    border: 1px solid rgba(255,255,255,.25);
+    bottom: 10px;
+    content: " ";
+    left: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px; 
+ }
+ .grid-item:hover .bg-img{
+     opacity: 1;
+ }
+
+/* End section portfolio */
+
+/* Section contact */
+ #contact {
+    padding: 100px 0 80px 0 ;
+    background: #fff;
+ }
+ #contact .block-content {
+     background: transparent;
+     margin-top: 40px;
+ }
+ #contact .block-content .block-item{
+    margin: 0px;
+    padding: 20px 0;
+}
+ #contact .block-content i {
+     font-size : 25px;
+     color: #199cdb;
+ }
+ #contact .block-content .contact-desc{
+     margin-top: 15px;
+ }
+ #contact .block-content .contact-desc h4 {
+     font-weight: 400;
+     font-size : 20px;
+ }
+ .sign-up{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+    z-index: 222;
+}
+ .input {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.flex-text{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px 0;
+}
+.input .flex-text .text{
+    width: 58%;
+}.input .flex-text .text-area{
+    width: 42%;
+}
+.input .flex-text .text input {
+    width: 95%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #888888;
+    margin-bottom: 10px ;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.041);
+    color: #888888;
+    border-radius: 4px;
+}
+.input .flex-text .text-area textarea {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #888888;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.041);
+    color: #888888;
+    border-radius: 4px;
+}
 
 
+
+input::placeholder,textarea::placeholder{
+    color: #888888;
+}
+
+.input button{
+    margin: 20px 0 0 0;
+    padding : 10px 20px;
+    border: none;
+    background: #199cdb;
+    color: #fff;
+    float: right;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+/* End section contact */
+
+/* Responsive design */
 @media screen and (max-width : 992px){
     #home .bg{
         background-position: unset;
@@ -368,11 +559,12 @@ width: 100%;
     nav .menu .avata{
         display: none;
     }
-    .block-content .block-about{
-        width: 100%;
-        padding: 100px 60px 50px 60px;
+    .block-content .block-item{
+        flex: 100% !important;
+        padding: 100px 40px 50px 40px;
+        max-width: 100% !important;
     }
-    .resume .block-content .block-about{
+    .resume .block-content .block-item{
         height: auto;
         width: 100%;
         margin: 20px 40px;
@@ -388,6 +580,9 @@ width: 100%;
     .resume .block-content .three ul li {
         width: 40%;
     }
+    .resume .block-content .three p {
+        font-size: 14px;
+    }
     .resume .block-content .three span{
         
         height: 2px;
@@ -402,5 +597,41 @@ width: 100%;
         padding: 0 ;
     }
     .grid-item { width: 46%; margin: 5px }
-   
+
+    .flex-text{
+        flex-direction: column;       
+    }
+    .input .flex-text .text{
+        width: 100%;
+    }
+    .input .flex-text .text input{
+        width: 100%;
+    }
+    .input .flex-text .text-area{
+        width: 100%;
+    }
+    .fact-list li .desc-fact {
+        font-size: 16px;
+        line-height: 32px;
+        color: #ffffff;
+        float: left;
+    }
+    
+    .fact-list li .desc-fact span {
+        display: block;
+        font-size: 32px;
+        margin-bottom: 2px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width : 768px){
+    .block-content ul.fact-list{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .block-content ul.fact-list li {
+        width: 100%;
+    }
 }
