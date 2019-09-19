@@ -27,8 +27,7 @@ $(document).ready(function(){
         });
     
     })
-    $('body').on({
-        'touchmove': function(e) { 
+    $('body,html').bind( 'touchmove', function(e) { 
             var pos = $('body,html').scrollTop() ;
         
             if(pos >=580 )
@@ -54,7 +53,7 @@ $(document).ready(function(){
                 }
             });
         }
-        });
+        );
     $('.btt i').click(function(){
         $("html,body").animate({ scrollTop: 0 }, 1000); 
     })
