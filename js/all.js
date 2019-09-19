@@ -17,7 +17,7 @@ $(document).ready(function(){
         $('nav .menu ul li').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.attr("data"));
-            if (refElement.position().top <= pos && refElement.position().top + refElement.height() > pos) {
+            if (refElement.position().top - 20 <= pos) {
                 $('nav .menu ul li').removeClass("active");
                 currLink.addClass("active");
             }
@@ -30,8 +30,8 @@ $(document).ready(function(){
     $('.btt i').click(function(){
         $("html,body").animate({ scrollTop: 0 }, 1000); 
     })
-   $('.menu ul li ').click(function() {
-    $('.menu ul li').removeClass('active')
+   $(' nav .menu ul li ').click(function() {
+    $('nav .menu ul li').removeClass('active')
     $(this).addClass("active")
     let target = $(this).attr("data");
         $('html,body').stop().animate({
