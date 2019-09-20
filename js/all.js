@@ -36,17 +36,19 @@ $(document).ready(function(){
     })
 
     $('.open-nav').click(function(){
+        $('.menu-responsive ul li a').removeClass('active-list')
            $('.menu-responsive').addClass('show-menu')
        }) 
     $('.menu-responsive ul li:last-child a').click(function(){
-    $('.menu-responsive').removeClass('show-menu')
+    $('.menu-responsive').removeClass('show-menu') 
         event.preventDefault();
     }) 
 
-    $('.menu-responsive ul li a').click(function(){
+    $('.menu-responsive ul li a:not(.menu-responsive ul li:last-child a)').click(function(){
+       
         $('.menu-responsive ul li a').removeClass('active-list')
         $(this).addClass('active-list')
-        let target = $(this).attr("href");
+        let target = $(this).attr("data");
         $('html,body').stop().animate({
         scrollTop: $(target).offset().top
         }, 1000);    

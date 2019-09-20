@@ -160,17 +160,16 @@ nav.scaleMenu .menu {
 nav.scaleMenu .menu .logo{
     display: block;
 }
-nav .menu .logo{
-    display: none;
-}
+
 nav .menu .logo {
+    display: none;
     padding: 0 20px;
 }
 nav .menu .logo span {
     color: #199cdb;
 }
 nav .menu .logo h2 {
-    font-size: 25px;
+    font-size: 22px;
 }
 nav.scaleMenu .menu .logo span{
     color: #199cdb;
@@ -270,6 +269,9 @@ nav .menu ul li i{
     }
     .menu-responsive ul {
         list-style: none;
+        padding : 0;
+        margin : 0;
+        text-align: center;
     }
 
     .menu-responsive.show-menu ul li a{
@@ -389,6 +391,7 @@ nav .menu ul li i{
     font-weight: 200;
     font-size: 15px;
 }
+
 .block-content h5{
     font-weight: 400;
     margin-bottom: 12px;
