@@ -30,7 +30,6 @@ body{
 }
 #home .bg .content{
     color : #fff;
-   
     text-transform: uppercase;
     text-align: center;
 }
@@ -907,7 +906,7 @@ footer .btt i {
         font-size : 20px;
     }
     .resume .block-content .three span{
-        width: 73px;
+        width: 80px;
     }
     nav  {
         display: none !important;
