@@ -18,7 +18,7 @@ $(document).ready(function(){
         $('nav .menu ul li').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.attr("data"));
-            if (refElement.position().top - 20 <= pos) {
+            if (refElement.offset().top - 20 <= pos) {
                 $('nav .menu ul li').removeClass("active");
                 currLink.addClass("active");
             }
@@ -106,7 +106,7 @@ $(document).ready(function(){
             localStart++;
             counters[id].innerHTML = localStart;
         }
-        },1);
+        },3);
     }
 
     for (j = 0; j < countersQuantity; j++) {
