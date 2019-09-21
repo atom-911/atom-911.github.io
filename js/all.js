@@ -1,6 +1,13 @@
 $(document).ready(function(){
     new WOW().init();
+
+    // loading
+    $(window).on('load', function(event) {
+        
+        $('.loading').delay(3000).fadeOut('fast');
+     });
     // scroll active
+    
     $(document).scroll(function(){
         var pos = $('body,html').scrollTop() ;
         
