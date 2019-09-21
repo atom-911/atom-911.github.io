@@ -35,7 +35,7 @@ body{
     font-size: 3.75rem;
     font-weight: 300;
     white-space: nowrap;
-    transform: scale(0.7)
+    transform: scale(0.7) ;
   }
   .loading-text::before {
     position: absolute;
@@ -85,7 +85,7 @@ body{
   }
   @keyframes dotMove {
     0%, 100% {
-      transform: rotate(180deg) translate(-110px, -10px) rotate(-180deg);
+      transform: rotate(180deg) translate(-100px, -10px) rotate(-180deg);
     }
     50% {
       transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);

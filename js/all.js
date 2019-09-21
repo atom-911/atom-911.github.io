@@ -4,7 +4,7 @@ $(document).ready(function(){
     // loading
     $(window).on('load', function(event) {
         
-        $('.loading').delay(3000).fadeOut('fast');
+        $('.loading').delay(4000).fadeOut('fast');
      });
     // scroll active
     
