@@ -73,6 +73,7 @@ nav .menu{
     align-items: center;
     justify-content: space-evenly;
     height: 70px;
+    width: 100%;
 }
 .scaleMenu{
     padding: 0px 100px;
