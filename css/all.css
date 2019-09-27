@@ -223,7 +223,9 @@ nav .menu{
 }
 
 nav.scaleMenu .menu {
-    justify-content: space-evenly; 
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
 
 }
 nav.scaleMenu .menu .logo{

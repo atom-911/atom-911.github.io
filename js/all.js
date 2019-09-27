@@ -113,7 +113,7 @@ $(document).ready(function(){
             localStart++;
             counters[id].innerHTML = localStart;
         }
-        },3);
+        },15);
     }
 
     for (j = 0; j < countersQuantity; j++) {
