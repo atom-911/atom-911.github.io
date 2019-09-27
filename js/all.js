@@ -11,7 +11,7 @@ $(document).ready(function(){
     $(document).scroll(function(){
         var pos = $('body,html').scrollTop() ;
         
-        if(pos >=580 )
+        if(pos >= 580 )
         {
             $('.btt').addClass("active")
              $('nav').addClass("scaleMenu")
@@ -25,7 +25,7 @@ $(document).ready(function(){
         $('nav .menu ul li').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.data("link"));
-            if (refElement.offset().top - 20 <= pos) {
+            if (refElement.offset().top - 60 <= pos) {
                 $('nav .menu ul li').removeClass("active");
                 currLink.addClass("active");
             }
@@ -72,7 +72,7 @@ $(document).ready(function(){
     $(this).addClass("active")
     let target = $(this).data("link");
         $('html,body').stop().animate({
-        scrollTop: $(target).offset().top
+        scrollTop: $(target).offset().top - 40
         }, 1000);    
         event.preventDefault();
    })
