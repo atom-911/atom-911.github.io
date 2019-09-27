@@ -24,7 +24,7 @@ $(document).ready(function(){
 
         $('nav .menu ul li').each(function () {
             var currLink = $(this);
-            var refElement = $(currLink.attr("data"));
+            var refElement = $(currLink.data("link"));
             if (refElement.offset().top - 20 <= pos) {
                 $('nav .menu ul li').removeClass("active");
                 currLink.addClass("active");
@@ -55,7 +55,7 @@ $(document).ready(function(){
        
         $('.menu-responsive ul li a').removeClass('active-list')
         $(this).addClass('active-list')
-        let target = $(this).attr("data");
+        let target = $(this).data("link");
         $('html,body').stop().animate({
         scrollTop: $(target).offset().top
         }, 1000);    
@@ -70,7 +70,7 @@ $(document).ready(function(){
    $(' nav .menu ul li ').click(function() {
     $('nav .menu ul li').removeClass('active')
     $(this).addClass("active")
-    let target = $(this).attr("data");
+    let target = $(this).data("link");
         $('html,body').stop().animate({
         scrollTop: $(target).offset().top
         }, 1000);    
