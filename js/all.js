@@ -8,8 +8,8 @@ $(document).ready(function(){
      });
     // scroll active
     
-    $(document).scroll(function(){
-        var pos = $('body,html').scrollTop() ;
+    $(window).scroll(function(){
+        var pos = $('html,body').scrollTop() ;
         
         if(pos >= 580 )
         {
