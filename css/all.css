@@ -171,16 +171,37 @@ body{
 #home .bg .content a {
     text-decoration: none;
     display: inline-block;
-    padding: 7px 22px;
-    border: 1px solid #199cdb;
+    padding: 7px 50px;
+    border: 2px solid #199cdb;
     color: #199cdb;
     border-radius: 4px;
     text-transform: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: bold;
 }
-#home .bg .content a:hover {
+#home .bg .content a:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
     background: #199cdb;
-    color: #fff;
+    left: 0;
+    top: 0;
+    transition: all 0.4s;
+    color: #fff !important;
+    z-index: -1;
 }
+#home .bg .content a:hover{
+    color: #fff !important;
+
+}
+#home .bg .content a:hover:before {
+    bottom: 0%;
+	top: auto;
+	height: 100%;
+} 
 
 /* Navigation */
 nav {
@@ -276,14 +297,10 @@ nav .menu ul li {
     text-align: center;
     
 }
-nav .menu ul li:hover{
-    border-bottom : 2px solid #199cdb;
-    padding: 22px 0;
-}
 nav .menu ul li.active 
 {
-    border-bottom : 2px solid #199cdb;
-    padding: 22px 0;
+   color: #158bc2;
+ 
 }
 nav .menu ul li:first-child{
     border-left: 1px solid #eaeaea;
@@ -294,6 +311,26 @@ nav .menu ul li a {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+nav .menu ul li a:before{
+    content: attr(data-text);
+    color: #199cdb;
+    width: 0% ;
+    white-space: nowrap;
+    padding: 9px 0;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    transition: all .4s;
+    text-transform: uppercase;
+    overflow: hidden;
+   
+}
+nav .menu ul li:hover a:before{
+    width: 100% ;
+    
 }
 nav .menu ul li i{
     font-size: 13px;
@@ -350,6 +387,8 @@ nav .menu ul li i{
         font-weight: 600;
         visibility: hidden;
         cursor: pointer;
+        position: relative;
+        z-index: 1;
       }
       
       .menu-responsive.show-menu ul li:nth-child(1) a{
@@ -378,13 +417,39 @@ nav .menu ul li i{
         animation: show-list 0.7s forwards;
         animation-delay : 0.9s;
       }
-      .menu-responsive.show-menu ul li a:hover {
-        color : #199cdb;
-        text-decoration: none;
-      }
 
-      .menu-responsive.show-menu ul li a.active-list{
-        color : #199cdb;
+      .menu-responsive.show-menu ul li a::before{
+        content: '';
+        height: 40px;
+        width: 0%;
+        display: block;
+        background: #199cdb;
+        position: absolute;
+        top: 10px;
+        transition: all 0.4s;
+        z-index: -1; 
+        right: 0;
+        padding: 0 auto;
+      }
+      .menu-responsive.show-menu ul li a:hover{
+         text-decoration: none;
+      }
+      .menu-responsive.show-menu ul li a:hover::before {
+        width: 60%;
+      }
+    
+      .menu-responsive.show-menu ul li a.active-list::before{
+        content: '';
+        height: 40px;
+        width: 60%;
+        display: block;
+        background: #199cdb;
+        position: absolute;
+        top: 10px;
+        transition: all 0.4s;
+        z-index: -1; 
+        right: 0;
+        padding: 0 auto;
       }
       .show-menu{
         -webkit-animation : show-menu 0.5s forwards;
@@ -734,9 +799,12 @@ width: 90%;
  .grid-item { 
     position: relative;
     margin: 4px;
+    overflow: hidden;
+    cursor: pointer;
  }
  .grid-item img{
-     width: 100% !important;
+     width: 100% ;
+     transition: all 0.5s;
  }
 
  .grid .bg-img {
@@ -750,9 +818,9 @@ width: 90%;
      opacity: 0;
      transition: 0.5s;
      flex-direction: column;
-     cursor: pointer;
      width: 100%;
      height: 100%;
+     
  }
  .grid .bg-img p {
      font-size : 13px;
@@ -769,8 +837,12 @@ width: 90%;
     top: 10px; 
    
  }
- .grid-item:hover .bg-img{
-     opacity: 1;
+.grid-item:hover .bg-img{
+     opacity: 1 ;
+ }
+ .grid.grid-item.bg-img:hover img{
+     transform: scale(1.3) rotate(5deg); 
+     transition: ease-in-out 0.8s;
  }
 
 /* End section portfolio */

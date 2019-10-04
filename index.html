@@ -10,17 +10,20 @@
     <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
-    <!-- Fancybox -->
-    <script  src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/jquery.mousewheel.pack.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-    <script src="js/wow.js"></script>
-    <script src="js/animate-headline.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <script src="js/all.js"></script>
-    <script src="js/isopote.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/animate-headline.css">
+    <!-- Fancybox -->
+    <script src="js/all.js"></script>
+    <script  src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.mousewheel.pack.js"></script>
+    <!-- WOW -->
+    <script src="js/wow.js"></script>
+    <script src="js/animate-headline.js"></script>
+     <!-- isopote -->
+    <script src="js/isopote.js"></script>
+   
     <!-- Bootstrap CSS -->
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -28,7 +31,7 @@
   <body>
 
     <!-- loading -->
-     <div class="loading">
+     <!-- <div class="loading">
             <div class="loading-text">
                 <span class="letter">L</span>
                 <span class="letter">o</span>
@@ -38,7 +41,7 @@
                 <span class="letter">n</span>
                 <span class="letter">g</span>
             </div>
-     </div>
+     </div> -->
         
      <!-- End loading -->
      
@@ -67,8 +70,8 @@
                     <div class="menu">
                         <div class="menu-left">
                             <ul>
-                                <li class="active" data-link= "#home" ><a >home</a><i class="fa fa-home"></i></li>
-                                <li data-link="#resume"><a >about</a><i class="fas fa-address-card"></i></li>
+                                <li class="active" data-link= "#home"  ><a data-text ="home" >home</a><i class="fa fa-home"></i></li>
+                                <li data-link="#resume" ><a data-text ="about">about</a><i class="fas fa-address-card"></i></li>
                             </ul>
                         </div>
                         <div class="avata">
@@ -79,8 +82,8 @@
                         </div>
                         <div class="menu-right">
                             <ul>
-                                <li data-link="#portfolio"><a>portfolio</a><i class="fas fa-camera-retro"></i></li>
-                                <li data-link="#contact"><a>contact</a><i class="fas fa-address-card"></i></li>
+                                <li data-link="#portfolio" ><a data-text ="portfolio">portfolio</a><i class="fas fa-camera-retro"></i></li>
+                                <li data-link="#contact" ><a data-text ="contact">contact</a><i class="fas fa-address-card"></i></li>
                             </ul>
                         </div>
                     </div>
@@ -398,11 +401,11 @@
                         <ul class="filter">
                             <li><a class="active"  data-filter=".all">All</a></li>
                             <li><a  data-filter=".group-one">Web Design</a></li>
-                            <li><a  data-filter=".group-two">Graphic </a></li>
+                            <li><a  data-filter=".group-two">Graphic Design</a></li>
                         </ul>
                         <div class="grid">
                             <div class="column">
-                                <div class="grid-item group-one " >
+                                <div class="grid-item group-one" >
                                     <a href="images/img1.jpg" class="fancybox">
                                         <div class="bg-img " >
                                             <h6>Project name</h6>

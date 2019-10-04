@@ -2,13 +2,13 @@ $(document).ready(function(){
     new WOW().init();
 
     // loading
-    $(window).on('load', function(event) {
+    // $(window).on('load', function(event) {
         
-        $('.loading').delay(4000).fadeOut('fast');
-     });
+    //     $('.loading').delay(4000).fadeOut('fast');
+    //  });
     // scroll active
     
-    $(window).scroll(function(){
+    $(window).on('scroll',function(){
         var pos = $('html,body').scrollTop() ;
         
         if(pos >= 580 )
