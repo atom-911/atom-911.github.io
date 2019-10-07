@@ -2,24 +2,25 @@ $(document).ready(function(){
     new WOW().init();
 
     // loading
-    // $(window).on('load', function(event) {
+    $(window).on('load', function(event) {
         
-    //     $('.loading').delay(4000).fadeOut('fast');
-    //  });
+        $('.loading').delay(4000).fadeOut('fast');
+     });
     // scroll active
-    
-    $(window).on('scroll',function(){
-        var pos = $('html,body').scrollTop() ;
-        
-        if(pos >= 580 )
+    var posNav = $('.menu').offset().top 
+    $(window).on("scroll",function(){
+        var pos = $('html,body').scrollTop() 
+        console.log(posNav)
+        if(pos >= posNav)
         {
             $('.btt').addClass("active")
              $('nav').addClass("scaleMenu")
         }
-        else 
+        else
         {
             $('.btt').removeClass("active")
              $('nav').removeClass("scaleMenu")
+             
         }
 
         $('nav .menu ul li').each(function () {
