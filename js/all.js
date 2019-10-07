@@ -2,7 +2,7 @@ $(document).ready(function(){
     new WOW().init();
 
     // loading
-    $(window).on('load', function(event) {
+    $(window).on('load', function() {
         
         $('.loading').delay(4000).fadeOut('fast');
      });
