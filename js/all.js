@@ -4,13 +4,12 @@ $(document).ready(function(){
     // loading
     $(window).on('load', function() {
         
-        $('.loading').delay(4000).fadeOut('fast');
+        $('.loading').delay(3000).fadeOut('fast');
      });
     // scroll active
     var posNav = $('.menu').offset().top 
     $(window).on("scroll",function(){
         var pos = $('html,body').scrollTop() 
-        console.log(posNav)
         if(pos >= posNav)
         {
             $('.btt').addClass("active")
@@ -114,7 +113,7 @@ $(document).ready(function(){
             localStart++;
             counters[id].innerHTML = localStart;
         }
-        },15);
+        },2);
     }
 
     for (j = 0; j < countersQuantity; j++) {

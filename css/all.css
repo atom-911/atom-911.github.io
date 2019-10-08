@@ -326,6 +326,7 @@ nav {
     -webkit-box-shadow: 0px 1px 2px rgb(168, 166, 166);
             box-shadow: 0px 1px 2px rgb(168, 166, 166);
     padding: 0;
+    background: #fff;
 }
 nav .menu{
     display: -webkit-box;
@@ -338,13 +339,14 @@ nav .menu{
         justify-content: space-around;
     height: 70px;
     width: 100%;
+    
 }
 .scaleMenu{
     padding: 0px 100px;
     width: 100%; 
     display: block;
     position: fixed;
-    background: #fff;
+    
     z-index: 999;
     top: 0;
     -webkit-animation: move 0.5s forwards;
@@ -490,7 +492,7 @@ nav .menu ul li i{
     .open-nav i{
         font-size: 30px;
         color: #199cdb;
-
+        mix-blend-mode: difference;
     }
     .menu-responsive {
         display: none;
@@ -531,7 +533,7 @@ nav .menu ul li i{
         color: #fff;
         padding: 5px ;
         font-size: 30px;
-        display: block;
+        display: inline-block;
         font-weight: 600;
         visibility: hidden;
         cursor: pointer;
@@ -566,13 +568,14 @@ nav .menu ul li i{
         color: #fff;
         padding: 10px ;
         font-size: 30px;
-        display: block;
+        display: inline-block;
         text-align: center;
         font-weight: 200;
         -webkit-animation: show-list 0.7s forwards;
                 animation: show-list 0.7s forwards;
         -webkit-animation-delay : 0.9s;
                 animation-delay : 0.9s;
+        
       }
 
       .menu-responsive.show-menu ul li a::before{
@@ -580,7 +583,7 @@ nav .menu ul li i{
         height: 40px;
         width: 0%;
         display: block;
-        background: #199cdb;
+        background: linear-gradient(to right, #2379a1, #199cdb);
         position: absolute;
         top: 10px;
         -webkit-transition: all 0.4s;
@@ -588,19 +591,18 @@ nav .menu ul li i{
         transition: all 0.4s;
         z-index: -1; 
         right: 0;
-        padding: 0 auto;
       }
       .menu-responsive.show-menu ul li a:hover{
          text-decoration: none;
       }
       .menu-responsive.show-menu ul li a:hover::before {
-        width: 60%;
+        width: 57%;
       }
     
       .menu-responsive.show-menu ul li a.active-list::before{
         content: '';
         height: 40px;
-        width: 60%;
+        width: 57%;
         display: block;
         background: #199cdb;
         position: absolute;
@@ -715,7 +717,7 @@ nav .menu ul li i{
 .block-content .block-item{
     width: 33%;
     margin: 0;
-    padding: 100px 80px 70px 60px;
+    padding: 100px 60px 70px 60px;
     font-weight: 200;
     font-size: 15px;
 }
@@ -791,21 +793,13 @@ nav .menu ul li i{
 
 .resume .block-content {
     background: #fff;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;  
-    -ms-flex-wrap: wrap;  
-        flex-wrap: wrap;
+    flex-direction: row-reverse;
+    display: flex; 
+    flex-wrap: wrap;
 
 }
 .resume .block-content .block-item{
     border: 1px solid #f0f0f0;
-    -webkit-box-flex: 32%;
-        -ms-flex: 32%;
             flex: 32%;
     padding: 60px 20px 0px 25px;
     line-height: 17px;
@@ -814,7 +808,7 @@ nav .menu ul li i{
     position: relative;
 }
 .resume .block-content .one{
-    -webkit-box-ordinal-group : 2;
+   
         -ms-flex-order : 1;
             order : 1;
     height: 100%;
@@ -822,36 +816,50 @@ nav .menu ul li i{
 }
 .resume .block-content .two {
     background: #fff;
-    -webkit-box-ordinal-group : 4;
+   
         -ms-flex-order : 3;
             order : 3;
     height: 100%;
 }
 .resume .block-content .three {
-    -webkit-box-ordinal-group : 3;
+
         -ms-flex-order : 2;
             order : 2;
+  
  }
-
+ .resume .block-content .three p {
+     margin-left: 5px;
+ }
 .resume .block-content .three .rating{
-    margin-top : -22px;
+  
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 .resume .block-content .three ul{
     list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    flex-wrap: wrap;
 }
+
 .resume .block-content .three ul li {
-    margin-bottom: 15px;
+    margin: 10px auto;
+    width: 100%;
 }
 .resume .block-content .three span{
     background: #199cdb;
     display: inline-block;
     height: 2px;
-    margin-right: 10px;
-    width: 47px;
+    margin: 0 5px;
+    max-width: 70px;
+    width: 20%;
     margin-top : -5px;
 }
 span.transparent{
-    opacity: 0.1;
+    opacity: 0.3;
     background: #888888;
 }
 
@@ -912,6 +920,7 @@ width: 90%;
     display: flex;
     width: 100%;
     margin-top: 50px;
+    margin-bottom: 0;
 }
 .block-content ul.fact-list li:first-child{
     background: #199cdb;
@@ -932,7 +941,7 @@ width: 90%;
 }
 
 .fact-list li .inner-fact {
-    margin:0 30px 0 35px;
+    margin:0 30px 0 50px;
 }
 
 .fact-list li span.ico-fact {
@@ -1216,6 +1225,7 @@ footer .btt i {
     color: #199cdb;
     font-size: 35px;
     cursor: pointer;
+    mix-blend-mode: difference !important;
 }
 
 
@@ -1241,35 +1251,12 @@ footer .btt i {
     }
     .resume .block-content .block-item{
         height: auto;
-        width: 100%;
+        flex: 100%;
+        max-width: 100%;
         margin: 20px 40px;
-        padding: auto;
-    }
-    .resume .block-content .three ul{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        width: 110%;
     }
     .resume .block-content .three ul li {
         width: 40%;
-    }
-    .resume .block-content .three p {
-        font-size: 14px;
-    }
-    .resume .block-content .three span{
-        height: 2px;
-        margin-right: 12px;
-        width: 90px;
     }
     nav.scaleMenu .logo h2 {
         font-size: 20px;
@@ -1329,17 +1316,27 @@ footer .btt i {
     #home .bg .content span {
         font-size : 23px;
     }
-    .resume .block-content .three span{
-        width: 80px;
+   
+    .resume .block-content .three ul li {
+        margin: 15px auto;
+        width: 100%;
     }
+    /* .resume .block-content .three span{
+        width: 80px;
+    } */
     nav  {
         display: none !important;
     }
+    .resume .block-content .block-item{
+        padding: 100px 30px 50px 30px !important;
+    }
     .block-content .block-item{
-         padding: 100px 50px 50px 50px;
+         padding: 100px 50px 50px 50px !important;
       
     }
-
+    .contact .block-content .block-item{
+        padding: 30px 50px !important;
+    }
     .block-content ul.fact-list{
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
