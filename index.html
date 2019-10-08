@@ -10,6 +10,10 @@
     <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+  
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
     <link rel="stylesheet" href="css/animate.css">
@@ -31,7 +35,7 @@
   <body>
 
     <!-- loading -->
-     <!-- <div class="loading">
+     <div class="loading">
             <div class="loading-text">
                 <span class="letter">L</span>
                 <span class="letter">o</span>
@@ -41,7 +45,7 @@
                 <span class="letter">n</span>
                 <span class="letter">g</span>
             </div>
-     </div> -->
+     </div>
         
      <!-- End loading -->
      
@@ -391,7 +395,40 @@
             </div>
         </section>
         <!-- End section resume -->
-
+        <section>
+            <div id="slider">
+                <div class="text-slider-wrapper">
+                    <div class="text-slider">
+                          <div class="text-slide"><h1>A blessing for <br> every skin.</h1></div>
+                          <div class="text-slide"><h1>The perfect mix of <br> old & new.</h1></div>
+                          <div class="text-slide"><h1>A journey over borders <br> & generations.</h1></div>
+                          <div class="text-slide"><h1>Your are the <br> stylist.</h1></div>
+                          <div class="text-slide"><h1>To be on the <br> forerfront.</h1></div>
+                    </div>
+              </div>
+        
+              <div class="slider-control">
+                    <div class="prev"><button type="button"><i class="fas fa-chevron-left"></i></button></div>
+                    <div class="next"><button type="button"><i class="fas fa-chevron-right"></i></button></div>
+              </div>
+        
+              <div class="blocks">
+                    <div class="block-1"></div>
+                    <div class="block-2"></div>
+                    <div class="block-3"></div>
+              </div>
+        
+              <div class="overlay"></div>
+        
+              <div class="image-slider">
+                    <div class="image-slide" id="one" style="background: url(https://images.unsplash.com/photo-1519011985187-444d62641929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2452&q=80) no-repeat 50% 50%; background-size: cover;"></div>
+                    <div class="image-slide" id="two" style="background: url(https://images.unsplash.com/photo-1509679708047-e0e562d21e44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60) no-repeat 50% 50%; background-size: cover;"></div>
+                    <div class="image-slide" id="three" style="background: url(https://images.unsplash.com/photo-1508215302842-8a015a452a20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80) no-repeat 50% 50%; background-size: cover;"></div>
+                    <div class="image-slide" id="four" style="background: url(https://images.unsplash.com/photo-1537510929030-2ffb7888f379?ixlib=rb-1.2.1&auto=format&fit=crop&w=2378&q=80) no-repeat 50% 50%; background-size: cover;"></div>
+                    <div class="image-slide" id="five" style="background: url(https://images.unsplash.com/photo-1552793084-49132af00ff1?ixlib=rb-1.2.1&auto=format&fit=crop&w=2953&q=80) no-repeat 50% 50%; background-size: cover;"></div>
+              </div>
+            </div>
+        </section>
         <!-- Section portfolio -->
         <section>
             <div id="portfolio" class='postfolio'>
@@ -572,6 +609,9 @@
             <div class="btt">
                     <i class="fas fa-arrow-circle-up"></i>
             </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3922.7733087320344!2d107.19492282551573!3d10.518512941045445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1570541177500!5m2!1svi!2s" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="">
+                
+            </iframe>
         </footer>
       </div>
       <script src="js/all.js"></script>
@@ -579,6 +619,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
