@@ -126,7 +126,7 @@ $(document).ready(function(){
             localStart++;
             counters[id].innerHTML = localStart;
         }
-        },15);
+        },10);
     }
 
     for (j = 0; j < countersQuantity; j++) {
