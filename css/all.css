@@ -803,18 +803,18 @@ nav .menu ul li i{
 
 .resume .block-content {
     background: #fff;
-    flex-direction: row-reverse;
+    flex-direction: row;
     display: flex; 
     flex-wrap: wrap;
-
-
 }
+
 .resume .block-content .one-col{
     flex-direction: row;
     display: flex; 
     flex-wrap: wrap;
     flex: 33%;
     max-width: 33%;
+    height: 100%;
 }
 .resume .block-content .block-item{
     border: 1px solid #f0f0f0;
@@ -825,13 +825,7 @@ nav .menu ul li i{
     max-width: 100%;
     position: relative;
 }
-/* .resume .block-content .one{
-   
-        -ms-flex-order : 1;
-            order : 1;
-    height: 100%;
-    
-} */
+
 .resume .block-content .two {
     background: #fff;
 }
@@ -892,7 +886,7 @@ span.transparent{
   }
 
 .time {
-padding: 8px 0px 1px 20px;
+padding: 8px 0px 1px 15px;
 position: relative;
 background-color: inherit;
 width: 100%;
@@ -915,12 +909,40 @@ left: -8px;
 
 .content-desc {
 position: relative;
-width: 90%;
+width: 100%;
 }
 .content-desc p {
     font-size : 13px;
 }
-  
+ 
+.resume .block-content .center-text{
+    text-align: center;
+}
+
+.resume .block-content .wrap {
+    display: inline-block;
+    text-align: center;
+    
+}   
+
+.resume .block-content  .circle{
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border : 1px solid #199cdb;
+    margin: 5px 6px;
+    line-height: 45px;
+}
+.resume .block-content  .circle:hover i {
+    color : #199cdb;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+/* End section resume */
+
 .block-content ul.fact-list{
     list-style: none;
     display: -webkit-box;
@@ -976,8 +998,6 @@ width: 90%;
     margin-bottom: 2px;
     font-weight: 600;
 }
-
-/* End section resume */
 
 /* Section slider */
 
@@ -1376,7 +1396,7 @@ footer .btt i {
         max-width: 100%;
     }
     .resume .block-content{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .resume .block-content .block-item{
         margin: 20px 40px;
@@ -1486,9 +1506,6 @@ footer .btt i {
         margin: 15px auto;
         width: 100%;
     }
-    /* .resume .block-content .three span{
-        width: 80px;
-    } */
     nav  {
         display: none !important;
     }

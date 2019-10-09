@@ -8,7 +8,7 @@ $(document).ready(function(){
      });
     // scroll active
     var posNav = $('.menu').offset().top 
-    $(window).on("scroll",function(){
+    $(window).bind("scroll",function(){
         var pos = $('html,body').scrollTop() 
         if(pos >= posNav)
         {
@@ -126,7 +126,7 @@ $(document).ready(function(){
             localStart++;
             counters[id].innerHTML = localStart;
         }
-        },10);
+        },12);
     }
 
     for (j = 0; j < countersQuantity; j++) {
@@ -188,4 +188,5 @@ $(document).ready(function(){
 
     $('.image-slider').slick(sickPrimary);
     $('.text-slider').slick(sickSecondary);
+
 })  
