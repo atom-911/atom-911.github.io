@@ -807,36 +807,34 @@ nav .menu ul li i{
     display: flex; 
     flex-wrap: wrap;
 
+
+}
+.resume .block-content .one-col{
+    flex-direction: row;
+    display: flex; 
+    flex-wrap: wrap;
+    flex: 33%;
+    max-width: 33%;
 }
 .resume .block-content .block-item{
     border: 1px solid #f0f0f0;
-            flex: 32%;
+            flex: 100%;
     padding: 60px 20px 0px 25px;
     line-height: 17px;
-    margin: 10px 4px;
-    max-width: 32%;
+    margin: 8px 6px;
+    max-width: 100%;
     position: relative;
 }
-.resume .block-content .one{
+/* .resume .block-content .one{
    
         -ms-flex-order : 1;
             order : 1;
     height: 100%;
     
-}
+} */
 .resume .block-content .two {
     background: #fff;
-   
-        -ms-flex-order : 3;
-            order : 3;
-    height: 100%;
 }
-.resume .block-content .three {
-
-        -ms-flex-order : 2;
-            order : 2;
-  
- }
  .resume .block-content .three p {
      margin-left: 5px;
  }
@@ -1372,7 +1370,17 @@ footer .btt i {
     nav .menu .avata{
         display: none;
     }
-   
+    .resume .block-content .one-col{
+        height: auto;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .resume .block-content{
+        flex-direction: column-reverse;
+    }
+    .resume .block-content .block-item{
+        margin: 20px 40px;
+    }
     .block-content .block-item{
         -webkit-box-flex: 100% !important;
             -ms-flex: 100% !important;
@@ -1380,12 +1388,7 @@ footer .btt i {
         padding: 100px 80px 50px 80px;
         max-width: 100% !important;
     }
-    .resume .block-content .block-item{
-        height: auto;
-        flex: 100%;
-        max-width: 100%;
-        margin: 20px 40px;
-    }
+   
     .resume .block-content .three ul li {
         width: 40%;
     }
@@ -1490,7 +1493,7 @@ footer .btt i {
         display: none !important;
     }
     .resume .block-content .block-item{
-        padding: 100px 30px 50px 30px !important;
+        padding: 70px 30px 30px 30px !important;
     }
     .block-content .block-item{
          padding: 100px 50px 50px 50px !important;
