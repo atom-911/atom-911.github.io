@@ -1,7 +1,7 @@
 $(document).ready(function(){
     new WOW().init();
-
     // loading
+    $("body").niceScroll();
     $(window).on('load', function() {
         
         $('.loading').delay(3000).fadeOut('fast');
