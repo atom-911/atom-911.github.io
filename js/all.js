@@ -1,11 +1,32 @@
 $(document).ready(function(){
     new WOW().init();
-    // loading
     $("body").niceScroll();
+    // loading
     $(window).on('load', function() {
-        
         $('.loading').delay(3000).fadeOut('fast');
      });
+      // count text
+    var counters = $(".count");
+    var countersQuantity = counters.length;
+    var counter = [];
+
+    for (i = 0; i < countersQuantity; i++) {
+        counter[i] = parseInt(counters[i].innerHTML);
+    }
+
+    count = function(start, value, id) {
+        var localStart = start;
+        setInterval( function() {
+            if (localStart < value) {
+                localStart++;
+                counters[id].innerHTML = localStart;
+            }
+        },10);
+    }
+    for (j = 0; j < countersQuantity; j++) {
+        count(0, counter[j], j)
+    }
+    
     // scroll active
     var posNav = $('.menu').offset().top 
     $(window).bind("scroll",function(){
@@ -46,9 +67,6 @@ $(document).ready(function(){
         mousedown : function(){
             $('.open-nav').css( "transform","translateX(-10px) translateY(-50%) rotate(45deg)" )
         },
-        // mouseover : function(){
-        //     $('.open-nav').css( "transform","translateX(-20px) translateY(-50%) rotate(45deg)"  )
-        // },
         mouseout : function(){
             $('.open-nav').css( "transform","translateX(0px) translateY(-50%) rotate(45deg)" )
          
@@ -110,28 +128,6 @@ $(document).ready(function(){
     // fancybox
     $('.fancybox').fancybox();
 
-    // count text
-    var counters = $(".count");
-    var countersQuantity = counters.length;
-    var counter = [];
-
-    for (i = 0; i < countersQuantity; i++) {
-        counter[i] = parseInt(counters[i].innerHTML);
-    }
-
-    var count = function(start, value, id) {
-        var localStart = start;
-        setInterval(function() {
-        if (localStart < value) {
-            localStart++;
-            counters[id].innerHTML = localStart;
-        }
-        },12);
-    }
-
-    for (j = 0; j < countersQuantity; j++) {
-        count(0, counter[j], j);
-    }
 
     // submit form
     var submit = $("button[type='submit']");
@@ -188,5 +184,5 @@ $(document).ready(function(){
 
     $('.image-slider').slick(sickPrimary);
     $('.text-slider').slick(sickSecondary);
-
+    
 })  
