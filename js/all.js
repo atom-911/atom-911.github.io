@@ -29,8 +29,8 @@ $(document).ready(function(){
     
     // scroll active
     var posNav = $('.menu').offset().top 
-    $(window).bind("scroll",function(){
-        var pos = $('html,body').scrollTop() 
+    $(window).on("scroll",function(){
+        var pos = $(document).scrollTop() 
         if(pos >= posNav)
         {
             $('.btt').addClass("active")

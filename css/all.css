@@ -112,8 +112,8 @@ body{
   }
   @-webkit-keyframes dotMove {
     0%, 100% {
-      -webkit-transform: rotate(180deg) translate(-100px, -10px) rotate(-180deg);
-              transform: rotate(180deg) translate(-100px, -10px) rotate(-180deg);
+      -webkit-transform: rotate(180deg) translate(-110px, -10px) rotate(-180deg);
+              transform: rotate(180deg) translate(-110px, -10px) rotate(-180deg);
     }
     50% {
       -webkit-transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
@@ -122,8 +122,8 @@ body{
   }
   @keyframes dotMove {
     0%, 100% {
-      -webkit-transform: rotate(180deg) translate(-100px, -10px) rotate(-180deg);
-              transform: rotate(180deg) translate(-100px, -10px) rotate(-180deg);
+      -webkit-transform: rotate(180deg) translate(-110px, -10px) rotate(-180deg);
+              transform: rotate(180deg) translate(-110px, -10px) rotate(-180deg);
     }
     50% {
       -webkit-transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
@@ -442,7 +442,7 @@ nav .menu ul li {
 }
 nav .menu ul li.active 
 {
-   color: #158bc2;
+   color: #199cdb;
  
 }
 nav .menu ul li:first-child{
@@ -457,25 +457,11 @@ nav .menu ul li a {
     position: relative;
     cursor: pointer;
 }
-nav .menu ul li a:before{
-    content: attr(data-text);
-    color: #199cdb;
-    width: 0% ;
-    white-space: nowrap;
-    padding: 9px 0;
-    position: absolute;
-    left: 0;
-    top: -10px;
-    -webkit-transition: all .4s;
-    -o-transition: all .4s;
-    transition: all .4s;
-    text-transform: uppercase;
-    overflow: hidden;
-   
+nav .menu ul li:hover a{
+    color: #199cdb !important;
 }
-nav .menu ul li:hover a:before{
-    width: 100% ;
-    
+nav .menu ul li a:hover{
+    color: #199cdb !important;
 }
 nav .menu ul li i{
     font-size: 13px;
@@ -1078,7 +1064,7 @@ width: 100%;
 .block-1 {
     z-index: 1;
     position: absolute;
-    height: 100vh;
+    height: 50vh;
     width: 5%;
     left: 0%;
     background: #0f0f0f;
