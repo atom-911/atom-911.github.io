@@ -1538,4 +1538,24 @@ footer .btt i {
     .open-nav{
         display: block;
     }
+    @-webkit-keyframes dotMove {
+        0%, 100% {
+          -webkit-transform: rotate(180deg) translate(-94px, -10px) rotate(-180deg);
+                  transform: rotate(180deg) translate(-94px, -10px) rotate(-180deg);
+        }
+        50% {
+          -webkit-transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
+                  transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
+        }
+      }
+      @keyframes dotMove {
+        0%, 100% {
+          -webkit-transform: rotate(180deg) translate(-94px, -10px) rotate(-180deg);
+                  transform: rotate(180deg) translate(-94px, -10px) rotate(-180deg);
+        }
+        50% {
+          -webkit-transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
+                  transform: rotate(0deg) translate(-111px, 10px) rotate(0deg);
+        }
+      }
 }
