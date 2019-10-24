@@ -647,29 +647,29 @@ nav .menu ul li i{
     max-width: 33%;
     height: 100%;
 }
+
 .resume .block-content .block-item{
     border: 1px solid #f0f0f0;
             flex: 100%;
-    padding: 60px 20px 0px 25px;
+    padding: 50px 20px 0px 25px;
     line-height: 17px;
     margin: 8px 6px;
     max-width: 100%;
     position: relative;
 }
 
-.resume .block-content .two {
+ .resume .block-content {
     background: #fff;
 }
- .resume .block-content .three p {
+ .resume .block-content  p {
      margin-left: 5px;
- }
-.resume .block-content .three .rating{
-  
+ } 
+.resume .block-content .rating{
     display: flex;
     align-items: center;
     width: 100%;
 }
-.resume .block-content .three ul{
+.resume .block-content ul{
     list-style: none;
     width: 100%;
     display: flex;
@@ -678,11 +678,11 @@ nav .menu ul li i{
     flex-wrap: wrap;
 }
 
-.resume .block-content .three ul li {
+.resume .block-content ul li {
     margin: 10px auto;
     width: 100%;
 }
-.resume .block-content .three span{
+.resume .block-content  span{
     background: #199cdb;
     display: inline-block;
     height: 2px;
@@ -1318,7 +1318,10 @@ footer .btt i {
     }
     #home .bg {
         background-attachment: unset;
-       }
+    }
+    .resume .block-content .one-col#two{
+    order: 3;
+    }
 }
 
 @media screen and (max-width : 768px){
