@@ -15,8 +15,7 @@ body{
     width: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding-top: 235px;
+    justify-content: center;
     flex-direction: column;
     letter-spacing: 0.2em;
     padding-left : 200px;
@@ -43,7 +42,7 @@ body{
 .info .show {
     padding: 90px 150px;
      display: flex;
-     justify-content: space-evenly;
+     justify-content: center;
      align-items: center;
      flex-direction: row;
 }
@@ -102,10 +101,14 @@ body{
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-  
+    padding: 0 70px;
+}
+.imagesCar ._1img{
+    flex : 33%;
+    margin: 0;
 }
 .imagesCar ._1img img{
-    width: 350px;
+    width: 100%;
 }
 .quote {
      padding: 90px 150px;
@@ -180,7 +183,7 @@ input::placeholder,textarea::placeholder{
     border-radius: 7px;
 }
 
-@media screen and (max-width : 1024px){
+@media screen and (max-width : 990px){
     .banner {
        /* background-position-y: -100px; */
         background-size: cover;
@@ -207,8 +210,11 @@ input::placeholder,textarea::placeholder{
     .galery {
         padding: 70px 0px 0px 0px;
     }
+    .imagesCar ._1img {
+        flex: 50%;
+    }
     .imagesCar ._1img img{
-        width: 350px;
+        width: 100%;
     }
     .quote {
         padding: 70px 20px;
